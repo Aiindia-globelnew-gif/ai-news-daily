@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>AI News Daily — The Daily Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f0eee6;
+      --surface: #ffffff;
+      --border: rgba(45,43,39,0.10);
+      --border-hi: rgba(45,43,39,0.18);
+      --text: #2d2b27;
+      --text-secondary: #59554e;
+      --text-tertiary: #8a8579;
+      --accent: #c2714c;
+      --accent-dim: rgba(194,113,76,0.10);
+      --shadow-card: 0 1px 3px rgba(45,43,39,0.06), 0 1px 2px rgba(45,43,39,0.04);
+      --shadow-elev: 0 8px 24px rgba(45,43,39,0.10), 0 2px 6px rgba(45,43,39,0.06);
+      --radius: 14px;
+      --maxw: 860px;
+      --font-serif: 'Lora', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(240,238,230,0.92);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav__inner {
+      max-width: var(--maxw); margin: 0 auto; padding: 12px 24px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .nav__logo {
+      width: 34px; height: 34px; border-radius: 50%; background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif); font-weight: 700; font-size: 16px; color: #fff; flex-shrink: 0;
+    }
+    .nav__brand { font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; }
+    .nav__tag {
+      font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-tertiary);
+      margin-left: auto; background: var(--accent-dim); padding: 4px 10px; border-radius: 20px;
+    }
+
+    .hero {
+      max-width: var(--maxw); margin: 0 auto; padding: 64px 24px 40px; text-align: center;
+    }
+    .hero__label {
+      font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--accent); margin-bottom: 14px;
+    }
+    .hero__title {
+      font-family: var(--font-serif); font-weight: 700; font-size: 3rem;
+      line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 14px;
+    }
+    .hero__subtitle {
+      font-family: var(--font-serif); font-style: italic; font-size: 1.2rem;
+      color: var(--text-secondary); line-height: 1.5; max-width: 580px; margin: 0 auto;
+    }
+
+    .editions {
+      max-width: var(--maxw); margin: 0 auto; padding: 0 24px 64px;
+    }
+    .editions__label {
+      font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--text); margin-bottom: 20px;
+    }
+    .editions__label::before {
+      content: ''; display: inline-block; width: 8px; height: 8px;
+      border-radius: 50%; background: var(--accent); margin-right: 8px; vertical-align: middle;
+    }
+
+    .edition-card {
+      display: flex; align-items: center; gap: 20px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-card);
+      padding: 24px 28px; margin-bottom: 16px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .edition-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-elev); }
+    .edition-card__date {
+      font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent);
+      background: var(--accent-dim); padding: 6px 12px; border-radius: 6px;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .edition-card__body { flex: 1; min-width: 0; }
+    .edition-card__headline {
+      font-family: var(--font-serif); font-weight: 600; font-size: 1.2rem;
+      line-height: 1.3; margin-bottom: 4px;
+    }
+    .edition-card__headline a { color: var(--text); }
+    .edition-card__headline a:hover { color: var(--accent); text-decoration: none; }
+    .edition-card__summary {
+      font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;
+    }
+    .edition-card__arrow {
+      font-size: 1.5rem; color: var(--text-tertiary); flex-shrink: 0;
+    }
+
+    .footer {
+      border-top: 1px solid var(--border); background: #faf8f3;
+      padding: 32px 24px; text-align: center;
+    }
+    .footer__logo {
+      width: 30px; height: 30px; border-radius: 50%; background: var(--accent);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif); font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 10px;
+    }
+    .footer__brand { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+    .footer__meta { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-tertiary); }
+    .footer__disclaimer { font-size: 0.8rem; color: var(--text-tertiary); max-width: 420px; margin: 8px auto 0; line-height: 1.5; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px 28px; }
+      .hero__title { font-size: 2.2rem; }
+      .hero__subtitle { font-size: 1rem; }
+      .edition-card { flex-direction: column; align-items: flex-start; padding: 20px; }
+      .edition-card__arrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <div class="nav__logo">AI</div>
+      <span class="nav__brand">AI News Daily</span>
+      <span class="nav__tag">The Daily Brief</span>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="hero__label">The Daily Brief</p>
+    <h1 class="hero__title">AI News Daily</h1>
+    <p class="hero__subtitle">Your morning roundup of AI news from India and across the globe. Published automatically every day at 10 AM IST.</p>
+  </header>
+
+  <section class="editions">
+    <h2 class="editions__label">Published Editions</h2>
+
+    <article class="edition-card">
+      <span class="edition-card__date">04 AUG 2026</span>
+      <div class="edition-card__body">
+        <h3 class="edition-card__headline"><a href="editions/2026-08-04.html">Anthropic goes local in India, Delhi HC rules on AI copyright, Alibaba drops 2.4T-param model</a></h3>
+        <p class="edition-card__summary">8 stories across India, Global, and Policy — including MeitY's agentic AI platform, Sarvam AI's trillion-parameter plans, the White House AI safety framework, and EU enforcement powers.</p>
+      </div>
+      <span class="edition-card__arrow">&#8594;</span>
+    </article>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer__logo">AI</div>
+    <div class="footer__brand">AI News Daily</div>
+    <div class="footer__meta">Auto-generated daily at 10 AM IST</div>
+    <div class="footer__disclaimer">Curated from public web sources. Summaries are editorial and not verbatim.</div>
+  </footer>
+
+</body>
+</html>
