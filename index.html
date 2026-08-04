@@ -26,6 +26,10 @@
       --tag-global: #4a7ba8;
       --tag-research: #4a8a6a;
       --tag-policy: #a87c2e;
+      --tag-frameworks: #5b6b8a;
+      --tag-rag: #5a8a7c;
+      --tag-vision: #8a5e4a;
+      --tag-tools: #6b7a4a;
       --shadow-card: 0 1px 3px rgba(45,43,39,0.06), 0 1px 2px rgba(45,43,39,0.04);
       --shadow-elev: 0 8px 24px rgba(45,43,39,0.10), 0 2px 6px rgba(45,43,39,0.06);
       --radius: 14px;
@@ -58,11 +62,15 @@
     .header__nav a { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; padding: 10px 16px; color: var(--text-secondary); white-space: nowrap; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; display: flex; align-items: center; gap: 6px; }
     .header__nav a:hover { color: var(--accent); text-decoration: none; }
     .header__nav a.active { color: var(--accent); border-bottom-color: var(--accent); }
-    .header__nav .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+    .header__nav .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
     .dot--india { background: var(--tag-india); }
     .dot--global { background: var(--tag-global); }
     .dot--research { background: var(--tag-research); }
     .dot--policy { background: var(--tag-policy); }
+    .dot--frameworks { background: var(--tag-frameworks); }
+    .dot--rag { background: var(--tag-rag); }
+    .dot--vision { background: var(--tag-vision); }
+    .dot--tools { background: var(--tag-tools); }
     .dot--all { background: var(--accent); }
 
     /* HERO */
@@ -99,6 +107,10 @@
     .tag--global { background: rgba(74,123,168,0.12); color: var(--tag-global); }
     .tag--research { background: rgba(74,138,106,0.12); color: var(--tag-research); }
     .tag--policy { background: rgba(168,124,46,0.12); color: var(--tag-policy); }
+    .tag--frameworks { background: rgba(91,107,138,0.12); color: var(--tag-frameworks); }
+    .tag--rag { background: rgba(90,138,124,0.12); color: var(--tag-rag); }
+    .tag--vision { background: rgba(138,94,74,0.12); color: var(--tag-vision); }
+    .tag--tools { background: rgba(107,122,74,0.12); color: var(--tag-tools); }
     .featured__cta { font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; }
     .featured__cta:hover { text-decoration: underline; }
 
@@ -171,6 +183,10 @@
         <a href="#" data-filter="global"><span class="dot dot--global"></span>Global</a>
         <a href="#" data-filter="research"><span class="dot dot--research"></span>Research</a>
         <a href="#" data-filter="policy"><span class="dot dot--policy"></span>Policy</a>
+        <a href="#" data-filter="frameworks"><span class="dot dot--frameworks"></span>Frameworks</a>
+        <a href="#" data-filter="rag"><span class="dot dot--rag"></span>RAG</a>
+        <a href="#" data-filter="vision"><span class="dot dot--vision"></span>Vision</a>
+        <a href="#" data-filter="tools"><span class="dot dot--tools"></span>Tools</a>
         <a href="#" data-filter="archive">Archive</a>
         <a href="#" data-filter="about">About</a>
       </nav>
@@ -180,11 +196,11 @@
   <section class="hero fade-up">
     <p class="hero__label">The Daily Brief</p>
     <h1 class="hero__title">AI News Daily</h1>
-    <p class="hero__subtitle">Your morning roundup of AI news from India and across the globe. Curated, summarised, and published automatically every day at 10 AM IST.</p>
+    <p class="hero__subtitle">Your morning roundup of AI news from India and across the globe — covering research, frameworks, RAG, vision models, marketing tools, and policy. Curated, summarised, and published automatically every day at 10 AM IST.</p>
     <div class="hero__meta">
       <div class="hero__meta-item"><div class="hero__meta-num">1</div><div class="hero__meta-label">Edition</div></div>
       <div class="hero__meta-item"><div class="hero__meta-num">8</div><div class="hero__meta-label">Stories</div></div>
-      <div class="hero__meta-item"><div class="hero__meta-num">4</div><div class="hero__meta-label">Categories</div></div>
+      <div class="hero__meta-item"><div class="hero__meta-num">8</div><div class="hero__meta-label">Categories</div></div>
       <div class="hero__meta-item"><div class="hero__meta-num">12</div><div class="hero__meta-label">Sources</div></div>
       <div class="hero__meta-item"><div class="hero__meta-num">10AM</div><div class="hero__meta-label">Daily IST</div></div>
     </div>
@@ -216,7 +232,16 @@
     </div>
     <aside class="main__sidebar">
       <div class="sidebar__section"><h3 class="sidebar__title">About</h3><p class="about__text"><strong>AI News Daily</strong> is an automated news blog that gathers the latest AI stories from India and across the globe each morning and publishes a polished, interactive HTML page summarizing the day's top developments.</p><p class="about__text" style="margin-top: 10px;">Stories are curated from reputable public sources and summarised editorially — not verbatim. Every edition is archived here permanently.</p></div>
-      <div class="sidebar__section"><h3 class="sidebar__title">Topics</h3><ul class="topics"><li><span class="dot dot--india"></span><span class="name">India</span><span class="count">4</span></li><li><span class="dot dot--global"></span><span class="name">Global</span><span class="count">2</span></li><li><span class="dot dot--research"></span><span class="name">Research</span><span class="count">0</span></li><li><span class="dot dot--policy"></span><span class="name">Policy</span><span class="count">3</span></li></ul></div>
+      <div class="sidebar__section"><h3 class="sidebar__title">Topics</h3><ul class="topics">
+        <li><span class="dot dot--india"></span><span class="name">India</span><span class="count">4</span></li>
+        <li><span class="dot dot--global"></span><span class="name">Global</span><span class="count">2</span></li>
+        <li><span class="dot dot--research"></span><span class="name">Research</span><span class="count">0</span></li>
+        <li><span class="dot dot--policy"></span><span class="name">Policy</span><span class="count">3</span></li>
+        <li><span class="dot dot--frameworks"></span><span class="name">Frameworks</span><span class="count">0</span></li>
+        <li><span class="dot dot--rag"></span><span class="name">RAG</span><span class="count">0</span></li>
+        <li><span class="dot dot--vision"></span><span class="name">Vision</span><span class="count">0</span></li>
+        <li><span class="dot dot--tools"></span><span class="name">Tools</span><span class="count">0</span></li>
+      </ul></div>
       <div class="sidebar__section"><h3 class="sidebar__title">Publish Schedule</h3><div class="schedule__time">10:00 AM</div><div class="schedule__tz">IST (Asia/Kolkata)</div><p class="schedule__note">A new edition is published automatically every morning at 10 AM IST. Each edition covers the preceding 24 hours of AI news.</p></div>
       <div class="sidebar__section"><h3 class="sidebar__title">Stay Updated</h3><p class="subscribe__text">Bookmark this page or visit daily. Each edition is also available on GitHub.</p><a href="https://github.com/Aiindia-globelnew-gif/ai-news-daily" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">&#8594; View on GitHub</a></div>
     </aside>
