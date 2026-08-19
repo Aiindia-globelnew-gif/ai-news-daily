@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>AI News Daily — The Daily Brief, 19 August 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:light;--bg:#f0eee6;--surface:#ffffff;--surface-hi:#faf8f3;--border:rgba(45,43,39,0.10);--border-hi:rgba(45,43,39,0.18);--text:#2d2b27;--text-secondary:#59554e;--text-tertiary:#8a8579;--accent:#c2714c;--accent-dim:rgba(194,113,76,0.10);--tag-india:#c44d3a;--tag-global:#4a7ba8;--tag-research:#4a8a6a;--tag-policy:#a87c2e;--tag-frameworks:#5b6b8a;--tag-rag:#5a8a7c;--tag-vision:#8a5e4a;--tag-tools:#6b7a4a;--shadow-card:0 1px 3px rgba(45,43,39,0.06),0 1px 2px rgba(45,43,39,0.04);--shadow-elev:0 8px 24px rgba(45,43,39,0.10),0 2px 6px rgba(45,43,39,0.06);--radius:14px;--radius-sm:8px;--font-serif:'Lora',Georgia,serif;--font-sans:'Inter',-apple-system,sans-serif;--font-mono:'JetBrains Mono','SF Mono',Consolas,monospace;--pad:24px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    #progress-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:var(--accent);z-index:1000;transition:width 0.1s ease}
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(240,238,230,0.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);width:100%}
+    .header-bar{display:flex;align-items:center;gap:14px;padding:12px var(--pad)}
+    .header-logo{width:38px;height:38px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:700;font-size:18px;color:#fff;flex-shrink:0}
+    .header-brand-wrap{display:flex;flex-direction:column}
+    .header-brand{font-weight:700;font-size:1.15rem;letter-spacing:-0.01em}
+    .header-tagline{font-family:var(--font-mono);font-size:0.68rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.1em}
+    .header-search{margin-left:auto;position:relative}
+    .header-search input{width:240px;padding:8px 12px 8px 34px;border:1px solid var(--border-hi);border-radius:var(--radius-sm);font-family:var(--font-sans);font-size:0.82rem;background:var(--surface);color:var(--text);transition:border-color 0.15s,box-shadow 0.15s,width 0.2s}
+    .header-search input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim);width:280px}
+    .header-search input::placeholder{color:var(--text-tertiary)}
+    .header-search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text-tertiary);font-size:0.85rem;pointer-events:none}
+    .header-nav{display:flex;gap:0;border-top:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch;padding:0 var(--pad)}
+    .header-nav a{font-family:var(--font-mono);font-size:0.78rem;font-weight:500;padding:10px 14px;color:var(--text-secondary);white-space:nowrap;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;display:flex;align-items:center;gap:6px}
+    .header-nav a:hover{color:var(--accent);text-decoration:none}
+    .header-nav a.active{color:var(--accent);border-bottom-color:var(--accent)}
+    .header-nav .dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
+    .dot--india{background:var(--tag-india)}.dot--global{background:var(--tag-global)}.dot--research{background:var(--tag-research)}.dot--policy{background:var(--tag-policy)}.dot--frameworks{background:var(--tag-frameworks)}.dot--rag{background:var(--tag-rag)}.dot--vision{background:var(--tag-vision)}.dot--tools{background:var(--tag-tools)}.dot--all{background:var(--accent)}
+    .hero{padding:44px var(--pad) 28px;text-align:center}
+    .hero__label{font-family:var(--font-mono);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:12px}
+    .hero__title{font-family:var(--font-serif);font-weight:700;font-size:2.4rem;line-height:1.15;letter-spacing:-0.02em;margin-bottom:10px}
+    .hero__subtitle{font-family:var(--font-serif);font-style:italic;font-size:1.1rem;color:var(--text-secondary);line-height:1.5;max-width:680px;margin:0 auto}
+    .hero__stats{display:flex;justify-content:center;gap:32px;margin-top:24px;flex-wrap:wrap}
+    .stat{text-align:center}.stat__num{font-family:var(--font-serif);font-weight:700;font-size:1.6rem;color:var(--text)}.stat__label{font-family:var(--font-mono);font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-tertiary);margin-top:2px}
+    .editor-note{padding:0 var(--pad);margin-bottom:24px}
+    .editor-note__box{background:var(--accent-dim);border:1px solid rgba(194,113,76,0.20);border-radius:var(--radius);padding:16px 20px;font-size:0.92rem;color:var(--text-secondary);line-height:1.55}
+    .editor-note__label{font-family:var(--font-mono);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:6px;display:block}
+    .controls{padding:0 var(--pad);margin-bottom:20px}
+    .search-wrap{position:relative;margin-bottom:14px}
+    .search-wrap input{width:100%;padding:12px 16px 12px 40px;border:1px solid var(--border-hi);border-radius:var(--radius-sm);font-family:var(--font-sans);font-size:0.9rem;background:var(--surface);color:var(--text);transition:border-color 0.15s,box-shadow 0.15s}
+    .search-wrap input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-dim)}
+    .search-wrap input::placeholder{color:var(--text-tertiary)}
+    .search-wrap__icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text-tertiary);font-size:0.9rem}
+    .search-wrap__hint{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:0.68rem;color:var(--text-tertiary);background:var(--bg);padding:2px 6px;border-radius:4px;border:1px solid var(--border);pointer-events:none}
+    .filters{display:flex;gap:8px;flex-wrap:wrap}
+    .filter-pill{font-family:var(--font-mono);font-size:0.75rem;font-weight:500;padding:6px 14px;border-radius:20px;border:1px solid var(--border-hi);background:var(--surface);color:var(--text-secondary);cursor:pointer;transition:all 0.15s}
+    .filter-pill:hover{border-color:var(--accent);color:var(--accent)}
+    .filter-pill.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .stories{padding:0 var(--pad) 40px}
+    .top-story{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-elev);padding:26px 28px;margin-bottom:32px;position:relative}
+    .top-story__badge{display:inline-block;font-family:var(--font-mono);font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);background:var(--accent-dim);padding:4px 10px;border-radius:4px;margin-bottom:12px}
+    .top-story__headline{font-family:var(--font-serif);font-weight:700;font-size:1.65rem;line-height:1.25;letter-spacing:-0.015em;margin-bottom:10px}
+    .top-story__headline a{color:var(--text)}.top-story__headline a:hover{color:var(--accent);text-decoration:none}
+    .top-story__summary{font-size:0.98rem;color:var(--text-secondary);line-height:1.6;margin-bottom:10px}
+    .top-story__detail{display:none;margin-top:10px;padding-top:12px;border-top:1px solid var(--border);font-size:0.9rem;color:var(--text-secondary);line-height:1.6}.top-story__detail.open{display:block}
+    .top-story__toggle{font-family:var(--font-mono);font-size:0.75rem;color:var(--accent);cursor:pointer;border:none;background:none;padding:0}.top-story__toggle:hover{text-decoration:underline}
+    .story-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px}
+    .story{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:20px 22px;transition:transform 0.2s ease,box-shadow 0.2s ease;position:relative}
+    .story:hover{transform:translateY(-3px);box-shadow:var(--shadow-elev)}
+    .story__tag{display:inline-block;font-family:var(--font-mono);font-size:0.68rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;padding:3px 8px;border-radius:4px;margin-bottom:10px}
+    .story__tag--india{background:rgba(196,77,58,0.12);color:var(--tag-india)}.story__tag--global{background:rgba(74,123,168,0.12);color:var(--tag-global)}.story__tag--research{background:rgba(74,138,106,0.12);color:var(--tag-research)}.story__tag--policy{background:rgba(168,124,46,0.12);color:var(--tag-policy)}.story__tag--frameworks{background:rgba(91,107,138,0.12);color:var(--tag-frameworks)}.story__tag--rag{background:rgba(90,138,124,0.12);color:var(--tag-rag)}.story__tag--vision{background:rgba(138,94,74,0.12);color:var(--tag-vision)}.story__tag--tools{background:rgba(107,122,74,0.12);color:var(--tag-tools)}
+    .story__headline{font-family:var(--font-serif);font-weight:600;font-size:1.15rem;line-height:1.3;letter-spacing:-0.01em;margin-bottom:8px}.story__headline a{color:var(--text)}.story__headline a:hover{color:var(--accent);text-decoration:none}
+    .story__summary{font-size:0.88rem;color:var(--text-secondary);line-height:1.55;margin-bottom:8px}
+    .story__detail{display:none;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:0.86rem;color:var(--text-secondary);line-height:1.55}.story__detail.open{display:block}
+    .story__toggle{font-family:var(--font-mono);font-size:0.72rem;color:var(--accent);cursor:pointer;border:none;background:none;padding:0}.story__toggle:hover{text-decoration:underline}
+    .story__source{font-family:var(--font-mono);font-size:0.7rem;color:var(--text-tertiary);margin-top:6px}
+    .story__bookmark{position:absolute;top:16px;right:16px;width:28px;height:28px;border:none;background:none;cursor:pointer;font-size:1.1rem;color:var(--text-tertiary);transition:color 0.15s,transform 0.15s;padding:0;line-height:1}.story__bookmark:hover{color:var(--accent);transform:scale(1.15)}.story__bookmark.bookmarked{color:var(--accent)}
+    .pull-quote{padding:0 var(--pad);margin:32px 0}
+    .pull-quote__text{font-family:var(--font-serif);font-style:italic;font-size:1.3rem;line-height:1.5;color:var(--text);border-left:4px solid var(--accent);padding-left:20px}
+    .pull-quote__author{font-family:var(--font-mono);font-size:0.78rem;color:var(--text-tertiary);margin-top:8px;padding-left:24px}
+    .quick-hits{padding:0 var(--pad);margin-bottom:40px}
+    .quick-hits__label{font-family:var(--font-mono);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--text);margin-bottom:14px}.quick-hits__label::before{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:middle}
+    .quick-hits ul{list-style:none;padding:0}.quick-hits li{padding:10px 0;border-bottom:1px solid var(--border);font-size:0.9rem;color:var(--text-secondary);line-height:1.55}.quick-hits li:last-child{border-bottom:none}.quick-hits li::before{content:'\2192';color:var(--accent);font-weight:600;margin-right:8px}.quick-hits .lead{font-weight:600;color:var(--text)}
+    .footer{border-top:1px solid var(--border);background:var(--surface-hi);padding:32px var(--pad);text-align:center}
+    .footer__logo{width:30px;height:30px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:700;font-size:14px;color:#fff;margin-bottom:10px}
+    .footer__brand{font-weight:700;font-size:0.95rem;margin-bottom:4px}
+    .footer__links{display:flex;justify-content:center;gap:20px;margin:14px 0;flex-wrap:wrap}.footer__links a{font-family:var(--font-mono);font-size:0.78rem;color:var(--text-secondary)}.footer__links a:hover{color:var(--accent)}
+    .footer__meta{font-family:var(--font-mono);font-size:0.72rem;color:var(--text-tertiary);margin-bottom:6px}
+    .footer__disclaimer{font-size:0.8rem;color:var(--text-tertiary);max-width:420px;margin:0 auto;line-height:1.5}
+    #back-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;font-size:1.3rem;line-height:1;box-shadow:var(--shadow-elev);opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s,transform 0.2s;z-index:900}#back-top.visible{opacity:1;visibility:visible}#back-top:hover{transform:translateY(-3px)}
+    #toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--text);color:#fff;font-family:var(--font-sans);font-size:0.85rem;padding:10px 20px;border-radius:24px;box-shadow:var(--shadow-elev);opacity:0;transition:transform 0.3s ease,opacity 0.3s ease;z-index:1100;pointer-events:none}#toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+    mark{background:rgba(194,113,76,0.22);color:var(--text);border-radius:3px;padding:0 2px}
+    .fade-up{opacity:0;transform:translateY(20px);animation:fadeUp 0.5s ease forwards}@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+    .hidden{display:none !important}
+    @media(max-width:600px){.hero{padding:32px var(--pad) 20px}.hero__title{font-size:1.8rem}.hero__subtitle{font-size:0.98rem}.hero__stats{gap:18px}.stat__num{font-size:1.3rem}.story-grid{grid-template-columns:1fr}.header-search{display:none}.top-story{padding:20px 18px}.top-story__headline{font-size:1.3rem}.pull-quote__text{font-size:1.1rem;padding-left:14px}.search-wrap__hint{display:none}#back-top{bottom:20px;right:20px;width:40px;height:40px}}
+    @media(prefers-reduced-motion:reduce){.fade-up{animation:none;opacity:1;transform:none}*{transition:none!important}html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <!-- SHARED STICKY HEADER — identical on all pages, editions use ../index.html links -->
+  <header class="site-header">
+    <div class="header-bar">
+      <div class="header-logo">AI</div>
+      <div class="header-brand-wrap"><span class="header-brand">AI News Daily</span><span class="header-tagline">The Daily Brief</span></div>
+      <div class="header-search"><span class="header-search-icon">&#x2315;</span><input type="text" id="header-search" placeholder="Search editions..." autocomplete="off"></div>
+    </div>
+    <nav class="header-nav">
+      <a href="../index.html"><span class="dot dot--all"></span>All</a>
+      <a href="../index.html"><span class="dot dot--india"></span>India</a>
+      <a href="../index.html"><span class="dot dot--global"></span>Global</a>
+      <a href="../index.html"><span class="dot dot--research"></span>Research</a>
+      <a href="../index.html"><span class="dot dot--policy"></span>Policy</a>
+      <a href="../index.html"><span class="dot dot--frameworks"></span>Frameworks</a>
+      <a href="../index.html"><span class="dot dot--rag"></span>RAG</a>
+      <a href="../index.html"><span class="dot dot--vision"></span>Vision</a>
+      <a href="../index.html"><span class="dot dot--tools"></span>Tools</a>
+    </nav>
+  </header>
+  <!-- HERO — replace {{DATE_DISPLAY}} and the subtitle with today's top themes -->
+  <section class="hero">
+    <p class="hero__label">The Daily Brief — 19 August 2026</p>
+    <h1 class="hero__title">Today in AI</h1>
+    <p class="hero__subtitle">Anthropic's Claude Opus 4.7 retakes the frontier lead, Gujarat and Uttar Pradesh pour crores into homegrown AI, and the EU's AI Act enforcement switches on in Poland.</p>
+    <div class="hero__stats">
+      <div class="stat"><div class="stat__num">14</div><div class="stat__label">Stories</div></div>
+      <div class="stat"><div class="stat__num">2</div><div class="stat__label">India</div></div>
+      <div class="stat"><div class="stat__num">8</div><div class="stat__label">Categories</div></div>
+      <div class="stat"><div class="stat__num">14</div><div class="stat__label">Sources</div></div>
+    </div>
+  </section>
+  <!-- EDITOR'S NOTE -->
+  <div class="editor-note"><div class="editor-note__box">
+    <span class="editor-note__label">Editor's Note</span>
+    Frontier-model competition hit a two-month cadence this week as Anthropic's Claude Opus 4.7 narrowly reclaimed the top benchmark spot from OpenAI and Google, while Google's Gemini 3.7 Flash pushed deeper into agentic coding. In India, two state governments - Gujarat and Uttar Pradesh - committed over Rs 1,100 crore combined to AI skilling and startup ecosystems. On the policy front, Poland became the first EU member to bring an AI Act implementing law into force, even as Brussels has yet to use its new fining powers. The open-source side stayed busy too, with MiniMax open-sourcing a video-with-sound model and LMSYS shipping a production-grade RL post-training stack.
+  </div></div>
+  <!-- CONTROLS — search + 9 filter pills -->
+  <div class="controls">
+    <div class="search-wrap">
+      <span class="search-wrap__icon">&#x2315;</span>
+      <input type="text" id="search" placeholder="Search stories..." autocomplete="off">
+      <span class="search-wrap__hint">Press / </span>
+    </div>
+    <div class="filters" id="filters">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="india">India</button>
+      <button class="filter-pill" data-filter="global">Global</button>
+      <button class="filter-pill" data-filter="research">Research</button>
+      <button class="filter-pill" data-filter="policy">Policy</button>
+      <button class="filter-pill" data-filter="frameworks">Frameworks</button>
+      <button class="filter-pill" data-filter="rag">RAG</button>
+      <button class="filter-pill" data-filter="vision">Vision</button>
+      <button class="filter-pill" data-filter="tools">Tools</button>
+    </div>
+  </div>
+  <!-- STORIES -->
+  <main class="stories">
+    <!-- TOP STORY — the most important story of the day -->
+    <article class="top-story fade-up" data-category="global" data-index="0">
+      <span class="top-story__badge">&#9733; Top Story</span>
+      <span class="story__tag story__tag--global">Global</span>
+      <h2 class="top-story__headline"><a href="https://bitrss.com/anthropic-ships-claude-opus-4-7-as-mythos-stays-under-lock-and-key-201924" target="_blank" rel="noopener">Anthropic Ships Claude Opus 4.7, Narrowly Retaking the Frontier Benchmark Crown</a></h2>
+      <p class="top-story__summary">Anthropic released Claude Opus 4.7, calling it a notable improvement over Opus 4.6 in advanced software engineering and agentic coding. The model narrowly outscores OpenAI's GPT-5.4 and Google's Gemini 3.1 Pro on key benchmarks, though the lead is tightening.</p>
+      <button class="top-story__toggle">Read more &#8595;</button>
+      <div class="top-story__detail">Pricing is unchanged at US$5 per million input tokens and US$25 per million output tokens, and the model is live across Anthropic's API, Amazon Bedrock, Google Vertex AI and Microsoft Foundry, plus GitHub Copilot for Pro+, Business and Enterprise users. Opus 4.7 takes the top spot on SWE-bench Pro and SWE-bench Verified; Cursor co-founder Michael Truell reported it cleared 70 per cent on CursorBench versus 58 per cent for Opus 4.6, and XBOW's Oege de Moor cited a jump from 54.5 per cent to 98.5 per cent on the firm's visual-acuity benchmark. Vision also gets a major upgrade - the model processes images up to 2,576 pixels on the long edge, more than three times prior Claude resolution. The subtext: Anthropic repeatedly positions Opus 4.7 as less broadly capable than 'Claude Mythos Preview', a frontier system restricted to roughly 40 vetted enterprise and government partners including Apple, Google, Microsoft and AWS. Opus 4.7 ships with deliberately reduced cyber capabilities and automated safeguards.</div>
+      <p class="story__source">Source: BraveNewCoin via BitRss, 18 August 2026</p>
+      <button class="story__bookmark" data-id="top">&#9825;</button>
+    </article>
+    <!-- STORY GRID -->
+    <div class="story-grid" id="story-grid">
+      <article class="story fade-up" data-category="global" data-index="1" style="animation-delay:0.05s">
+        <span class="story__tag story__tag--global">Global</span>
+        <h3 class="story__headline"><a href="https://factum.media/en/google-releases-gemini-3-7-flash-for-coding-and-agent-tasks/" target="_blank" rel="noopener">Google Unveils Gemini 3.7 Flash for Faster Coding and Agentic Tasks</a></h3>
+        <p class="story__summary">Google launched Gemini 3.7 Flash on 13 August, calling it the company's most powerful release yet for coding and agentic tasks, arriving just three weeks after Gemini 3.6 Flash. The model targets engineers looking to speed up routine coding and reduce code-generation errors.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">Gemini 3.7 Flash enters a crowded AI-coding segment alongside GitHub Copilot and Anthropic's Claude Code. Google is positioning it squarely at developers integrating AI into daily workflows, though Memeburn notes the model's low promotional price carries an expiry date - a signal Google is willing to subsidise adoption now and monetise later. The rapid 3.6-to-3.7 cadence underscores how compressed frontier release cycles have become.</div>
+        <p class="story__source">Source: Factum Media, 17 August 2026</p>
+        <button class="story__bookmark" data-id="1">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="india" data-index="2" style="animation-delay:0.1s">
+        <span class="story__tag story__tag--india">India</span>
+        <h3 class="story__headline"><a href="https://timesofindia.indiatimes.com/city/ahmedabad/rs-100cr-ai-push-gujarat-inks-10-year-pat-targets-students-startups-and-msmes/articleshow/133305241.cms" target="_blank" rel="noopener">Gujarat Inks 10-Year, Rs 100-Crore AI Pact Targeting Students, Startups and MSMEs</a></h3>
+        <p class="story__summary">Gujarat signed a 10-year agreement to drive AI adoption across students, startups and MSMEs with a Rs 100 crore commitment. The push aims to build AI skilling pipelines and make the technology accessible to smaller enterprises across the state.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">The pact is one of the larger state-level AI investments in India this year and signals that sub-national governments are moving from policy drafts to funded programmes. By targeting MSMEs - the backbone of Gujarat's industrial base - the initiative tries to close the adoption gap between large enterprises that can hire AI talent and smaller firms that cannot.</div>
+        <p class="story__source">Source: Times of India, 18 August 2026</p>
+        <button class="story__bookmark" data-id="2">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="india" data-index="3" style="animation-delay:0.15s">
+        <span class="story__tag story__tag--india">India</span>
+        <h3 class="story__headline"><a href="https://www.bwdisrupt.com/article/uttar-pradesh-unveils-startup-policy-2026-allocates-rs-1000-cr-fund-to-boost-innovation-613536" target="_blank" rel="noopener">Uttar Pradesh Unveils Startup Policy 2026 With Rs 1,000-Crore Innovation Fund</a></h3>
+        <p class="story__summary">Uttar Pradesh released its Startup Policy 2026, allocating a Rs 1,000 crore fund to boost innovation and entrepreneurship. The policy targets early-stage founders and deep-tech ventures including AI.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">The fund is among the largest state-backed startup commitments in India and positions UP alongside Karnataka and Maharashtra in competing for AI and deep-tech talent. The policy ties incentives to job creation and local infrastructure, part of a broader state-level race to capture India's next wave of technology-led growth.</div>
+        <p class="story__source">Source: BW Disrupt, August 2026</p>
+        <button class="story__bookmark" data-id="3">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="policy" data-index="4" style="animation-delay:0.2s">
+        <span class="story__tag story__tag--policy">Policy</span>
+        <h3 class="story__headline"><a href="https://aiineurope.co/policy/act-tracker-2026-08-17" target="_blank" rel="noopener">Poland Becomes First EU Member State to Bring AI Act Implementing Law Into Force</a></h3>
+        <p class="story__summary">Poland's AI Act implementing law entered into force on 11 August, making it the only member state to have done so. Two weeks after the European Commission gained the power to fine general-purpose AI providers, it has used none of it.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">Poland is building a brand-new regulator, KRiBSI - the commission for the development and security of artificial intelligence - which will serve as the single market surveillance authority under the AI Act, drawing members from the competition, financial, broadcasting and telecoms regulators. The regulator does not yet exist, however, even as the law is live - a gap that highlights how uneven AI Act enforcement across the bloc remains.</div>
+        <p class="story__source">Source: AI in Europe, 17 August 2026</p>
+        <button class="story__bookmark" data-id="4">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="policy" data-index="5" style="animation-delay:0.25s">
+        <span class="story__tag story__tag--policy">Policy</span>
+        <h3 class="story__headline"><a href="https://www.complianceweek.com/artificial-intelligence/californias-ai-labeling-law-takes-effect-testing-compliance-with-missing-detection-tools/" target="_blank" rel="noopener">California's AI Labeling Law Takes Effect Amid Missing Detection Tools</a></h3>
+        <p class="story__summary">California's AI transparency and labeling law has now taken effect, requiring disclosure of AI-generated content. Compliance Week reports the rollout is being tested by the absence of reliable detection tools to verify labelling.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">The law pushes platforms and creators to flag synthetic media, but enforcement hinges on technical capabilities - watermarking and provenance signals - that are not yet uniformly deployed. The gap between legal mandate and technical readiness is becoming a recurring pattern in AI governance, with regulators moving faster than the infrastructure needed to operationalise their rules.</div>
+        <p class="story__source">Source: Compliance Week, August 2026</p>
+        <button class="story__bookmark" data-id="5">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="frameworks" data-index="6" style="animation-delay:0.3s">
+        <span class="story__tag story__tag--frameworks">Frameworks</span>
+        <h3 class="story__headline"><a href="https://www.lmsys.org/blog/2026-08-18-miles-v0-1/" target="_blank" rel="noopener">LMSYS Releases Miles v0.1, a Production-Grade RL Post-Training Stack</a></h3>
+        <p class="story__summary">LMSYS Org unveiled Miles v0.1, a full-stack production-ready system for frontier post-training and the successor to its first Miles release. It optimises every stage of the RL training loop around verified, clean and customizable principles.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">Miles ships maintained end-to-end recipes for agentic coding and terminal tasks, validated on real hardware. It supports two training backends behind one interface - NVIDIA Megatron-LM and PyTorch FSDP - selectable via a single launch flag, with Megatron-LM as the default offering tensor, pipeline, context and expert parallelism plus CPU and NVMe optimizer offload. The goal is to make frontier-scale reinforcement learning accessible to researchers without bespoke infrastructure.</div>
+        <p class="story__source">Source: LMSYS Org Blog, 18 August 2026</p>
+        <button class="story__bookmark" data-id="6">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="frameworks" data-index="7" style="animation-delay:0.35s">
+        <span class="story__tag story__tag--frameworks">Frameworks</span>
+        <h3 class="story__headline"><a href="https://venturebeat.com/technology/qwen3-8-27b-runs-frontier-class-coding-agents-and-reasoning-locally-no-cloud-api-required" target="_blank" rel="noopener">Qwen3.8-27B Runs Frontier-Class Coding Agents and Reasoning Locally</a></h3>
+        <p class="story__summary">Alibaba's Qwen3.8-27B open-weight model can run frontier-class coding agents and reasoning tasks locally with no cloud API required, VentureBeat reports. The release pushes capable agentic performance into a size developers can self-host.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">Local deployment matters for cost, latency and data sovereignty, and the 27B parameter footprint puts the model within reach of a single high-end GPU. For teams building agentic workflows who cannot or will not send data to external APIs, Qwen3.8-27B narrows the gap between hosted frontier models and self-hosted alternatives.</div>
+        <p class="story__source">Source: VentureBeat, August 2026</p>
+        <button class="story__bookmark" data-id="7">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="frameworks" data-index="8" style="animation-delay:0.4s">
+        <span class="story__tag story__tag--frameworks">Frameworks</span>
+        <h3 class="story__headline"><a href="https://www.marktechpost.com/2026/08/17/bytedance-seed-and-tsinghua-air-introduces-cuda-agent-a-large-scale-agentic-rl-system-for-cuda-kernel-generation/" target="_blank" rel="noopener">ByteDance Seed and Tsinghua AIR Introduce CUDA Agent for Kernel Generation</a></h3>
+        <p class="story__summary">ByteDance Seed and Tsinghua AIR introduced CUDA Agent, a large-scale agentic reinforcement-learning system for generating CUDA kernels. The system targets one of the hardest optimisation problems in GPU computing - writing efficient custom kernels.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">Hand-writing high-performance CUDA kernels is a specialist skill in short supply. By framing kernel generation as an agentic RL problem, the system can explore, verify and iterate on kernel candidates at scale, potentially automating a bottleneck in AI infrastructure performance. The collaboration pairs ByteDance's production-scale compute with Tsinghua's academic research depth.</div>
+        <p class="story__source">Source: MarkTechPost, 17 August 2026</p>
+        <button class="story__bookmark" data-id="8">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="rag" data-index="9" style="animation-delay:0.45s">
+        <span class="story__tag story__tag--rag">RAG</span>
+        <h3 class="story__headline"><a href="https://aws.amazon.com/blogs/machine-learning/improve-contract-search-accuracy-with-auto-generated-filters-in-amazon-bedrock/" target="_blank" rel="noopener">Amazon Bedrock Adds Auto-Generated Filters to Improve Contract Search Accuracy</a></h3>
+        <p class="story__summary">AWS introduced auto-generated filters in Amazon Bedrock to improve retrieval accuracy in contract search workflows. The feature automatically derives metadata filters from user queries to narrow retrieval before generation.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">The update targets a known RAG weak point: unstructured queries against large document corpora often return noisy results. By auto-generating structured filters - date ranges, parties, contract type - the system constrains the retrieval set, which a 2026 legal-RAG benchmark found matters more than the choice of LLM. One benchmark cited swapping embedding models lifted retrieval accuracy by 34 points while the LLM moved the needle far less.</div>
+        <p class="story__source">Source: AWS Machine Learning Blog, August 2026</p>
+        <button class="story__bookmark" data-id="9">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="vision" data-index="10" style="animation-delay:0.5s">
+        <span class="story__tag story__tag--vision">Vision</span>
+        <h3 class="story__headline"><a href="https://dev.to/breachprotocol/minimax-put-its-video-with-sound-model-on-hugging-face-37ce" target="_blank" rel="noopener">MiniMax Open-Sources H3, a Video-With-Sound Generation Model</a></h3>
+        <p class="story__summary">MiniMax released the weights for H3, a multimodal generation model that produces video with native sound built in rather than added afterwards. The model landed on Hugging Face on 13 August and has been downloaded more than 2.3 million times.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">H3 generates video with native 32 kHz stereo audio, 4 to 15 seconds long at 24 frames per second, with 2K resolution available through a separate regeneration step. The weights arrived roughly two weeks after the 31 July launch, when MiniMax committed to opening them subject to applicable laws. Native audio-video generation removes the sync and quality problems of stitching separate audio and video pipelines together.</div>
+        <p class="story__source">Source: DEV Community, 17 August 2026</p>
+        <button class="story__bookmark" data-id="10">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="vision" data-index="11" style="animation-delay:0.55s">
+        <span class="story__tag story__tag--vision">Vision</span>
+        <h3 class="story__headline"><a href="https://siliconangle.com/2026/08/17/higgsfield-raises-400m-at-5-4-billion-valuation-to-scale-video-and-image-generation-platform/" target="_blank" rel="noopener">Higgsfield Raises $400 Million at $5.4 Billion Valuation to Scale Generative Media</a></h3>
+        <p class="story__summary">Higgsfield raised $400 million at a $5.4 billion valuation to scale its video and image generation platform, SiliconANGLE reports. The round signals sustained investor appetite for generative-media infrastructure despite a broader funding contraction.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">Higgsfield competes in a crowded video-generation field alongside Runway, MiniMax and others. The valuation - north of $5 billion - places it among the better-funded generative-media startups and suggests investors are betting that proprietary models and creator-facing tooling will command premium pricing as the market matures.</div>
+        <p class="story__source">Source: SiliconANGLE, 17 August 2026</p>
+        <button class="story__bookmark" data-id="11">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="tools" data-index="12" style="animation-delay:0.6s">
+        <span class="story__tag story__tag--tools">Tools</span>
+        <h3 class="story__headline"><a href="https://www.hostinger.com/blog/ai-builder-launch/" target="_blank" rel="noopener">Hostinger Launches AI Builder, an Agentic Platform Beyond Website Generation</a></h3>
+        <p class="story__summary">Hostinger launched AI Builder, moving beyond AI-generated websites toward an agentic platform that builds, runs and grows online projects. It pairs AI-led creation with native backend, ecommerce and marketing infrastructure so the AI can act, not just advise.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">A year ago, fewer than 4 per cent of Hostinger projects fell outside traditional website categories; today nearly one in five are SaaS products, internal tools or learning platforms - a fivefold increase. AI Builder can provision databases, set up authentication, open a store and send email campaigns itself. Hostinger Connector, included free, lets external AI assistants like Claude Code, Cursor and VS Code work on the same account. VP of Product Aukse Zirgule said the next battle is not generating a homepage in 30 seconds but what happens after.</div>
+        <p class="story__source">Source: Hostinger Blog, 18 August 2026</p>
+        <button class="story__bookmark" data-id="12">&#9825;</button>
+      </article>
+      <article class="story fade-up" data-category="tools" data-index="13" style="animation-delay:0.65s">
+        <span class="story__tag story__tag--tools">Tools</span>
+        <h3 class="story__headline"><a href="https://www.uniphore.com/press-releases/uniphore-launches-marketing-ai-as-marketing-moves-beyond-the-cdp/" target="_blank" rel="noopener">Uniphore Launches Marketing AI as Customer Engagement Moves Beyond the CDP</a></h3>
+        <p class="story__summary">Uniphore launched Marketing AI, positioning the product as a shift beyond traditional customer data platforms. The offering applies AI to orchestrate and personalise marketing engagement across channels.</p>
+        <button class="story__toggle">Read more &#8595;</button>
+        <div class="story__detail">The launch reflects an industry-wide move from static customer-data platforms toward AI-driven engagement systems that act on data in real time. Uniphore, which has built a broader conversational AI and enterprise platform, is betting that marketing teams will increasingly rely on AI agents to plan, execute and optimise campaigns rather than dashboards alone.</div>
+        <p class="story__source">Source: Uniphore Press Release, August 2026</p>
+        <button class="story__bookmark" data-id="13">&#9825;</button>
+      </article>
+    </div>
+  </main>
+  <!-- PULL QUOTE -->
+  <div class="pull-quote fade-up">
+    <p class="pull-quote__text">"The next battle in online presence is not about who can generate a homepage in 30 seconds. It is about what happens next - can the AI open the store, create the user management system, help attract customers, and keep improving the project?"</p>
+    <p class="pull-quote__author">- Aukse Zirgule, VP of Product at Hostinger</p>
+  </div>
+  <!-- QUICK HITS -->
+  <section class="quick-hits">
+    <h2 class="quick-hits__label">Quick Hits</h2>
+    <ul>
+      <li><span class="lead">OpenAI model spec update</span> - OpenAI published an updated Model Spec dated 18 August 2026, refining its guidance on model behaviour and safety defaults.</li>
+      <li><span class="lead">Astute raises $1.2M</span> - Astute launched a B2B new media platform and raised $1.2 million in early funding, Tech.eu reports.</li>
+      <li><span class="lead">Okara launches AI CMO</span> - Okara launched what it calls the world's first AI CMO, a marketing agent designed to automate growth workflows.</li>
+      <li><span class="lead">JAX v0.11.1 released</span> - The jax-ml/jax project shipped version 0.11.1, the latest incremental update to Google's numerical-computing framework.</li>
+      <li><span class="lead">Runway autoregressive-to-diffusion</span> - Runway Research unveiled an autoregressive-to-diffusion approach for vision-language models aimed at faster visual AI.</li>
+      <li><span class="lead">Rogue AI agent legal territory</span> - Law.com reports that rogue AI agent attacks are opening uncharted legal territory, with no clear liability framework yet.</li>
+    </ul>
+  </section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__logo">AI</div>
+    <div class="footer__brand">AI News Daily</div>
+    <div class="footer__links"><a href="../index.html">Home</a><a href="../index.html">Archive</a><a href="../index.html">About</a><a href="https://github.com/Aiindia-globelnew-gif/ai-news-daily">GitHub</a></div>
+    <div class="footer__meta">Generated 19 August 2026 — 14 sources</div>
+    <div class="footer__disclaimer">Curated from public web sources. Summaries are editorial and not verbatim. Verify with original sources before acting on any information.</div>
+  </footer>
+  <button id="back-top" aria-label="Back to top">&#8593;</button>
+  <div id="toast"></div>
+  <script>const progressBar=document.getElementById('progress-bar');function updateProgress(){const s=window.scrollY;const h=document.documentElement.scrollHeight-window.innerHeight;progressBar.style.width=(h>0?(s/h)*100:0)+'%';}window.addEventListener('scroll',updateProgress,{passive:true});const backTop=document.getElementById('back-top');window.addEventListener('scroll',()=>{backTop.classList.toggle('visible',window.scrollY>400);},{passive:true});backTop.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'});});const bookmarks=new Set();const bookmarkBtns=document.querySelectorAll('.story__bookmark');const bookmarksCounter=document.querySelector('.nav__bookmarks');bookmarkBtns.forEach(btn=>{btn.addEventListener('click',(e)=>{e.stopPropagation();const id=btn.dataset.id;if(bookmarks.has(id)){bookmarks.delete(id);btn.classList.remove('bookmarked');btn.textContent='\u2661';showToast('Removed from bookmarks');}else{bookmarks.add(id);btn.classList.add('bookmarked');btn.textContent='\u2665';showToast('Saved to bookmarks');}});});const toast=document.getElementById('toast');let toastTimer;function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200);}document.querySelectorAll('.story__toggle, .top-story__toggle').forEach(btn=>{btn.addEventListener('click',()=>{const d=btn.nextElementSibling;if(d&&(d.classList.contains('story__detail')||d.classList.contains('top-story__detail'))){const o=d.classList.toggle('open');btn.textContent=o?'Show less \u2191':'Read more \u2193';}});});let currentFilter='all';const filterPills=document.querySelectorAll('.filter-pill');function applyFilter(filter){currentFilter=filter;filterPills.forEach(p=>p.classList.toggle('active',p.dataset.filter===filter));document.querySelectorAll('.story, .top-story').forEach(el=>{if(filter==='all'||el.dataset.category===filter){el.classList.remove('hidden');}else{el.classList.add('hidden');}});}filterPills.forEach(pill=>{pill.addEventListener('click',()=>{applyFilter(pill.dataset.filter);handleSearch();});});const searchInput=document.getElementById('search');function handleSearch(){const q=searchInput.value.trim().toLowerCase();document.querySelectorAll('.story, .top-story').forEach(s=>{if(currentFilter!=='all'&&s.dataset.category!==currentFilter){if(!s.classList.contains('hidden'))s.classList.add('hidden');return;}if(q===''){s.classList.remove('hidden');removeHighlights(s);return;}if(s.textContent.toLowerCase().includes(q)){s.classList.remove('hidden');highlightText(s,q);}else{s.classList.add('hidden');removeHighlights(s);}});}function highlightText(el,q){const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);const ns=[];let n;while(n=w.nextNode()){if(n.parentElement.closest('script, style, mark'))continue;if(n.textContent.toLowerCase().includes(q))ns.push(n);}ns.forEach(tn=>{const t=tn.textContent;const l=t.toLowerCase();const i=l.indexOf(q);if(i===-1)return;const b=t.slice(0,i);const m=t.slice(i,i+q.length);const a=t.slice(i+q.length);const mk=document.createElement('mark');mk.textContent=m;const f=document.createDocumentFragment();if(b)f.appendChild(document.createTextNode(b));f.appendChild(mk);if(a)f.appendChild(document.createTextNode(a));tn.parentNode.replaceChild(f,tn);});}function removeHighlights(el){el.querySelectorAll('mark').forEach(m=>{const p=m.parentNode;p.replaceChild(document.createTextNode(m.textContent),m);p.normalize();});}searchInput.addEventListener('input',handleSearch);document.addEventListener('keydown',(e)=>{if(e.key==='/'&&document.activeElement!==searchInput){e.preventDefault();searchInput.focus();}if(e.key==='Escape'&&document.activeElement===searchInput){searchInput.value='';handleSearch();searchInput.blur();}});updateProgress();</script>
+</body>
+</html>
