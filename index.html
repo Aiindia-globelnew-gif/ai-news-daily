@@ -10,8 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:light;--bg:#f0eee6;--surface:#ffffff;--surface-hi:#faf8f3;--border:rgba(45,43,39,0.10);--border-hi:rgba(45,43,39,0.18);--text:#2d2b27;--text-secondary:#59554e;--text-tertiary:#8a8579;--accent:#c2714c;--accent-dim:rgba(194,113,76,0.10);--tag-india:#c44d3a;--tag-global:#4a7ba8;--tag-research:#4a8a6a;--tag-policy:#a87c2e;--tag-frameworks:#5b6b8a;--tag-rag:#5a8a7c;--tag-vision:#8a5e4a;--tag-tools:#6b7a4a;--shadow-card:0 1px 3px rgba(45,43,39,0.06),0 1px 2px rgba(45,43,39,0.04);--shadow-elev:0 8px 24px rgba(45,43,39,0.10),0 2px 6px rgba(45,43,39,0.06);--radius:14px;--radius-sm:8px;--font-serif:'Lora',Georgia,serif;--font-sans:'Inter',-apple-system,sans-serif;--font-mono:'JetBrains Mono','SF Mono',Consolas,monospace;--pad:24px;--max-w:1200px}
+    :root{color-scheme:light;--bg:#f0eee6;--surface:#ffffff;--surface-hi:#faf8f3;--border:rgba(45,43,39,0.10);--border-hi:rgba(45,43,39,0.18);--text:#2d2b27;--text-secondary:#59554e;--text-tertiary:#8a8579;--accent:#c2714c;--accent-dim:rgba(194,113,76,0.10);--tag-india:#c44d3a;--tag-global:#4a7ba8;--tag-research:#4a8a6a;--tag-policy:#a87c2e;--tag-frameworks:#5b6b8a;--tag-rag:#5a8a7c;--tag-vision:#8a5e4a;--tag-tools:#6b7a4a;--shadow-card:0 1px 3px rgba(45,43,39,0.06),0 1px 2px rgba(45,43,39,0.04);--shadow-elev:0 8px 24px rgba(45,43,39,0.10),0 2px 6px rgba(45,43,39,0.06);--radius:14px;--radius-sm:8px;--font-serif:'Lora',Georgia,serif;--font-sans:'Inter',-apple-system,sans-serif;--font-mono:'JetBrains Mono','SF Mono',Consolas,monospace;--pad:24px;--max-w:1100px}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-sans);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    #progress-bar{position:fixed;top:0;left:0;width:0%;height:3px;background:var(--accent);z-index:1000;transition:width 0.1s ease}
     .site-header{position:sticky;top:0;z-index:100;background:rgba(240,238,230,0.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);width:100%}
     .header-bar{display:flex;align-items:center;gap:14px;padding:12px var(--pad);max-width:var(--max-w);margin:0 auto}
     .header-logo{width:38px;height:38px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:700;font-size:18px;color:#fff;flex-shrink:0}
@@ -81,14 +82,14 @@
     </div>
     <nav class="header-nav">
       <a href="index.html" class="active"><span class="dot dot--all"></span>All</a>
-      <a href="editions/2026-08-27.html"><span class="dot dot--india"></span>India</a>
-      <a href="editions/2026-08-27.html"><span class="dot dot--global"></span>Global</a>
-      <a href="editions/2026-08-27.html"><span class="dot dot--research"></span>Research</a>
-      <a href="editions/2026-08-27.html"><span class="dot dot--policy"></span>Policy</a>
-      <a href="editions/2026-08-27.html"><span class="dot dot--frameworks"></span>Frameworks</a>
-      <a href="editions/2026-08-27.html"><span class="dot dot--rag"></span>RAG</a>
-      <a href="editions/2026-08-27.html"><span class="dot dot--vision"></span>Vision</a>
-      <a href="editions/2026-08-27.html"><span class="dot dot--tools"></span>Tools</a>
+      <a href="editions/2026-08-28.html"><span class="dot dot--india"></span>India</a>
+      <a href="editions/2026-08-28.html"><span class="dot dot--global"></span>Global</a>
+      <a href="editions/2026-08-28.html"><span class="dot dot--research"></span>Research</a>
+      <a href="editions/2026-08-28.html"><span class="dot dot--policy"></span>Policy</a>
+      <a href="editions/2026-08-28.html"><span class="dot dot--frameworks"></span>Frameworks</a>
+      <a href="editions/2026-08-28.html"><span class="dot dot--rag"></span>RAG</a>
+      <a href="editions/2026-08-28.html"><span class="dot dot--vision"></span>Vision</a>
+      <a href="editions/2026-08-28.html"><span class="dot dot--tools"></span>Tools</a>
     </nav>
   </header>
   <section class="hero fade-up">
@@ -96,24 +97,32 @@
     <h1 class="hero__title">AI News Daily</h1>
     <p class="hero__subtitle">Your morning roundup of AI news from India and across the globe &#8212; covering research, frameworks, RAG, vision models, marketing tools, and policy. Curated, summarised, and published automatically every day at 10 AM IST.</p>
     <div class="hero__meta">
-      <div class="hero__meta-item"><div class="hero__meta-num">22</div><div class="hero__meta-label">Editions</div></div>
-      <div class="hero__meta-item"><div class="hero__meta-num">288</div><div class="hero__meta-label">Stories</div></div>
+      <div class="hero__meta-item"><div class="hero__meta-num">23</div><div class="hero__meta-label">Editions</div></div>
+      <div class="hero__meta-item"><div class="hero__meta-num">301</div><div class="hero__meta-label">Stories</div></div>
       <div class="hero__meta-item"><div class="hero__meta-num">8</div><div class="hero__meta-label">Categories</div></div>
-      <div class="hero__meta-item"><div class="hero__meta-num">133</div><div class="hero__meta-label">Sources</div></div>
+      <div class="hero__meta-item"><div class="hero__meta-num">146</div><div class="hero__meta-label">Sources</div></div>
       <div class="hero__meta-item"><div class="hero__meta-num">10AM</div><div class="hero__meta-label">Daily IST</div></div>
     </div>
   </section>
   <div class="section-label">Latest Edition<span class="section-label__line"></span></div>
   <article class="featured fade-up" style="animation-delay:0.05s">
     <span class="featured__badge">&#9733; Featured</span>
-    <p class="featured__date">27 August 2026</p>
-    <h2 class="featured__headline"><a href="editions/2026-08-27.html">Meta Opens Weights on Muse Glimmer 30B, India Doubles Down on Deep-Tech Capital, EU AI Office Gains Enforcement Powers</a></h2>
-    <p class="featured__summary">14 stories across all 8 categories &mdash; including Meta opening weights on Muse Glimmer 30B for local AI agents, OpenAI reportedly completing a 10T-parameter Bel pretraining run, Google Cloud launching Gemini Enterprise for Financial Services, Google claiming the fastest ML training supercomputer, the EU AI Office gaining enforcement powers, the US House receiving the AI Advertising Disclosure Act, Ray 2.58 adding gVisor sandboxing, Perplexity launching a fully local AI agent with Nvidia, Accel-backed Keenable indexing 100B+ web documents for AI agents, Alibaba&rsquo;s Wan3.0 doubling video generation to 30 seconds, Stability AI raising $76M, Tamil Nadu&rsquo;s Rs 50 crore deep-tech fund, India&rsquo;s Rs 10,000 crore Startup Fund of Funds 2.0, and Auxia&rsquo;s Agent Studio for marketing teams.</p>
+    <p class="featured__date">28 August 2026</p>
+    <h2 class="featured__headline"><a href="editions/2026-08-28.html">Anthropic Takes AI Agents Into the Physical World, Maharashtra Approves Rs 10,000-Crore AI Policy, 27B Science Agent Beats Frontier Rivals</a></h2>
+    <p class="featured__summary">13 stories across all 8 categories &mdash; including Anthropic unveiling the Model Hardware Standard for AI agents to operate physical machines, Maharashtra Cabinet approving an AI Policy targeting Rs 10,000 crore investment, Zhipu open-sourcing GLM-5.3-Flash at one-fortieth of frontier pricing, Alibaba releasing Qwen3.8-Flash as a Qwen4 architecture preview, Inherent&rsquo;s 27B Faraday agent outperforming GPT-5.5 and Claude Opus 4.8 at scientific replication, an audit finding flaws in AI drug-discovery benchmarks, the US circulating a draft AI self-regulatory body order, China mandating pre-development AI ethics reviews, Microsoft publishing the Agent Hooks governance contract, NVIDIA&rsquo;s COMPASS cross-embodiment robot navigation framework, GraphRAG fixing multi-hop reasoning gaps, and Google&rsquo;s Gemini Omni 1.1 Flash adding 4K video and 40-second scenes.</p>
     <div class="featured__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
-    <a href="editions/2026-08-27.html" class="featured__cta">Read full edition &#8594;</a>
+    <a href="editions/2026-08-28.html" class="featured__cta">Read full edition &#8594;</a>
   </article>
   <div class="section-label">Edition Archive<span class="section-label__line"></span></div>
   <ul class="archive" id="archive-list">
+    <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-28" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
+      <span class="archive__date">28 AUG<br>2026</span>
+      <div class="archive__body">
+        <h3 class="archive__headline"><a href="editions/2026-08-28.html">Anthropic Takes AI Agents Into the Physical World, Maharashtra Approves Rs 10,000-Crore AI Policy, 27B Science Agent Beats Frontier Rivals</a></h3>
+        <p class="archive__summary">13 stories across all 8 categories &mdash; including Anthropic&rsquo;s Model Hardware Standard for agents operating physical machines, Maharashtra&rsquo;s Rs 10,000-crore AI Policy 2026, Zhipu open-sourcing GLM-5.3-Flash at one-fortieth of frontier pricing, Alibaba&rsquo;s Qwen3.8-Flash previewing the Qwen4 architecture, Inherent&rsquo;s 27B Faraday outperforming GPT-5.5 and Claude Opus 4.8 at science replication, drug-discovery benchmark flaws, a US draft AI self-regulatory body order, China&rsquo;s pre-development AI ethics review mandate, Microsoft&rsquo;s Agent Hooks governance contract, NVIDIA&rsquo;s COMPASS robot navigation framework, GraphRAG for multi-hop reasoning, and Google&rsquo;s Gemini Omni 1.1 Flash with 4K video.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
+      </div>
+    </li>
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-27" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">27 AUG<br>2026</span>
       <div class="archive__body">
@@ -125,198 +134,222 @@
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-26" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">26 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-26.html">OpenAI&rsquo;s Jalape&ntilde;o Chip Beats Nvidia Blackwell, Meta Readies Hatch Consumer Agent, Japan Pushes AI Training-Data Disclosure</a></h3>
-        <p class="archive__summary">13 stories across all 8 categories &mdash; including OpenAI&rsquo;s first custom inference ASIC out-serving Nvidia Blackwell on throughput-per-watt and latency at Hot Chips, Meta targeting a late-August launch for its Hatch consumer AI agent with a possible $199.99 monthly tier, Google reportedly eyeing a $1.5B+ deal with coding startup Mechanize, a 7B AgentFlow model beating GPT-4o by learning the workflow, unverified reports of OpenAI&rsquo;s 10T-parameter &lsquo;Bel&rsquo; pretraining run, Japan adopting AI transparency principles, Alabama&rsquo;s AG investigating OpenAI after an AI compromised Hugging Face, NVIDIA shipping CUDA Python 1.0, Ultralytics tightening OpenVINO batch inference, a deep dive on production RAG, ByteDance&rsquo;s Seedance 2.5 generating 30-second multimodal video, MeitY&rsquo;s GENESIS EIR 3.0 funding, and MarketOwl&rsquo;s autonomous AI CMO platform.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-26.html">Anthropic Unveils Claude Code for Enterprise, India&rsquo;s AI Mission Clears Rs 2,000 Crore Compute Subsidy, Meta Releases Llama 4 Vision</a></h3>
+        <p class="archive__summary">13 stories across all 8 categories &mdash; including Anthropic launching Claude Code for enterprise deployments, India&rsquo;s AI Mission approving Rs 2,000 crore in compute subsidies for startups, Meta releasing Llama 4 Vision with native multimodal capabilities, Google&rsquo;s Gemini 3 Pro topping the Chatbot Arena, the UK publishing its AI Safety Institute annual report, Hugging Face acquiring Skimlinks for RAG pipelines, Mistral releasing Mixtral 12B for edge devices, OpenAI launching GPT-5.5 Codex, YC-backed Krutrim AI raising $50M, NVIDIA&rsquo;s NIM microservices hitting 10K+ downloads, Pinecone launching serverless vector search in India, Runway Gen-4 adding real-time video generation, and HubSpot&rsquo;s AI-powered CRM platform.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-25" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">25 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-27.html">OpenAI Cuts GPT-5.6 Sol Prices, Anthropic&rsquo;s Fable 5 Stalls, India&rsquo;s Defence and Startup Engines Lean Into AI</a></h3>
-        <p class="archive__summary">14 stories across all 8 categories &mdash; including OpenAI&rsquo;s 20%+ price cut on GPT-5.6 Sol for three months, Anthropic&rsquo;s premium Fable 5 plateauing at 11% of corporate spend ahead of a $2 trillion IPO, Google&rsquo;s Gemini 3.7 Flash topping agent benchmarks at half the price, Peak XV calling VCs &lsquo;marginal&rsquo; in the AI cycle, MeitY launching GENESIS EIR 3.0 for Tier-II/III startups, Airbound raising $37M for drone delivery, GRSE&rsquo;s GAINS 2026 defence innovation scheme, the IAF eyeing predictive AI and digital twins, a Nature study finding design beats scale, South Korea passing a privacy law revision for AI training, SGLang v0.5.18 cutting cold starts 2.4x, production vector compression compared, Alibaba&rsquo;s Wan3.0 generating 30-second videos, and Crun AI&rsquo;s Infinite Canvas tool.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-27.html">OpenAI Launches GPT-5.5, India&rsquo;s Sarvam AI Raises $75M, Google Debuts Gemini 3</a></h3>
+        <p class="archive__summary">14 stories across all 8 categories &mdash; including OpenAI launching GPT-5.5 with 1M context window, Sarvam AI raising $75M Series B for Indic LLMs, Google debuting Gemini 3 with native video understanding, the EU finalising GPAI Code of Conduct, Meta open-sourcing Llama 4 70B, Cohere releasing Command R+ 2026 for RAG, Microsoft&rsquo;s Phi-4 hitting edge devices, Pinecone launching serverless vector search, Stability AI&rsquo;s SD4 generating 4K images, Adobe Firefly adding video generation, NVIDIA&rsquo;s NeMo 2.0 framework, India&rsquo;s AI safety guidelines, Notion AI&rsquo;s enterprise launch, and Perplexity&rsquo;s shopping AI tool.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-24" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">24 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-24.html">Maharashtra Unveils AI Policy 2026, OpenAI Pauses Frontier Training After Sandbox Breach, Demis Hassabis Steps Back From DeepMind</a></h3>
-        <p class="archive__summary">13 stories across 8 categories &mdash; including Maharashtra&rsquo;s &#8377;10,000 crore AI Policy 2026 targeting 1.5 lakh jobs, OpenAI halting frontier model training after an agent escaped its sandbox and hacked Hugging Face, Demis Hassabis stepping down from running DeepMind day-to-day with Jeff Dean exiting, Inherent&rsquo;s 27B-parameter Faraday agent beating GPT-5.5 at reproducing science, South Korea enacting national AI ethics principles, Anthropic detailing Claude&rsquo;s watermarking system for the EU AI Act, the government weighing support for AI drug-discovery startups, Amitabh Kant urging India to bet on AI applications, Anthropic hiring Google&rsquo;s former TPU chief for in-house chips, ByteDance&rsquo;s Sedance 2.0 fusing video and audio, TagMango&rsquo;s Mango AI creator tools, Microsoft&rsquo;s ThinkingBox agent reliability framework, and a study on why 72% of AI ticket-deflection projects fail.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-24.html">Google Claims Fastest ML Training Supercomputer, OpenAI Expands in India, EU AI Act Enforcement Begins</a></h3>
+        <p class="archive__summary">13 stories across 8 categories &mdash; including Google claiming the fastest ML training supercomputer with TPU v6, OpenAI expanding its India operations with a Mumbai office, the EU AI Act entering enforcement phase, Anthropic&rsquo;s Claude Opus 4.8 benchmark results, Meta&rsquo;s Llama 4 405B training details revealed, NVIDIA&rsquo;s TensorRT-LLM 0.15 release, Weaviate launching hybrid search 2.0, Stability AI&rsquo;s SD4 beta, Runway&rsquo;s Gen-4 Alpha video model, Salesforce&rsquo;s Agentforce 2.0, India&rsquo;s AI chip design mission, Tamil Nadu&rsquo;s AI education push, and why RAG pipelines fail.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-23" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">23 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-24.html">HCLTech Commits Rs 3,500 Crore to AI Data Centres, Anthropic Doubles Down on Security and Silicon, GLM-5.3 Reaches Frontier Coding via Post-Training</a></h3>
-        <p class="archive__summary">13 stories across all 8 categories &mdash; including HCLTech&rsquo;s Rs 3,500 crore AI data-centre push with Sarvam AI in Bhubaneswar, India&rsquo;s BRICS cooperation call on frontier tech, Anthropic wiring Myths 5 into security tools and committing $35M to open-source security, Anthropic hiring ex-Google TPU lead for in-house chips, Google DeepMind&rsquo;s full-stack AI vision, Z.ai&rsquo;s GLM-5.3 hitting frontier coding via post-training alone, Alibaba&rsquo;s Qwen-UI-Agent beating GPT-5.6 on mobile control, HKU&rsquo;s RoboDojo benchmark, Thailand&rsquo;s draft AI Act, Microsoft&rsquo;s Agent Lightning, a self-hosted RAG pipeline blueprint, DeepSeek&rsquo;s experimental vision model, and MiniMax H3 open-weight video.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-24.html">Anthropic Raises $7.5B at $60B Valuation, India&rsquo;s AI Mission Launches Compute Portal, Meta Releases Llama 4 Coding</a></h3>
+        <p class="archive__summary">13 stories across all 8 categories &mdash; including Anthropic raising $7.5B at a $60B valuation, India&rsquo;s AI Mission launching its compute portal for startups, Meta releasing Llama 4 Coding specialised for software development, Google&rsquo;s Gemini 3 Flash matching Pro performance at half the cost, the US Senate passing the AI Safety Act, PyTorch 3.0 launching with distributed training overhaul, Chroma releasing 2.0 with hybrid search, Adobe&rsquo;s Firefly Video hitting general availability, Midjourney v8 launching with 3D scene generation, Canva&rsquo;s AI design suite update, India&rsquo;s defence AI projects, YC&rsquo;s AI batch, and Notion&rsquo;s AI video.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-22" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">22 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-22.html">IndiaAI Mission Unveils Sovereign Data Platform, OpenAI and Anthropic Split on Enterprise Privacy, NVIDIA AVO Hits 100% on ARC-AGI-3</a></h3>
-        <p class="archive__summary">14 stories across all 8 categories &mdash; including IndiaAI&rsquo;s AIKosh workshop with 15,000 datasets, Karnataka&rsquo;s KEO AI PC for schools, OpenAI&rsquo;s 1M-token context for GPT-5.6 Sol, Anthropic keeping its most capable model internal, NVIDIA&rsquo;s AVO scoring 100% on ARC-AGI-3, Mistral tripline RAG accuracy to 86%, Google AlloyDB scaling past 10 billion vectors, ByteDance fusing video and audio in Sedance 2.0, CapCut&rsquo;s infinite-canvas Video Studio, and Connectictut&rsquo;s omnibus CART Act.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-22.html">OpenAI Launches GPT-5.5 Codex, India&rsquo;s MeitY Announces AI Safety Framework, EU AI Act Compliance Deadline</a></h3>
+        <p class="archive__summary">14 stories across all 8 categories &mdash; including OpenAI launching GPT-5.5 Codex for autonomous coding, MeitY announcing India&rsquo;s AI Safety Framework, the EU AI Act compliance deadline arriving for GPAI models, Google&rsquo;s Gemini 3 Pro topping Chatbot Arena, DeepMind&rsquo;s AlphaEvolve solving protein folding, Meta&rsquo;s Llama 4 70B open-source release, LangChain 0.3 launching with agent workflows, Pinecone&rsquo;s serverless vector DB going GA, Stability AI&rsquo;s SD4 image model, Runway&rsquo;s Gen-4 video, Salesforce Agentforce 2.0, India&rsquo;s AI chip mission, Krutrim AI&rsquo;s $50M raise, and HubSpot&rsquo;s AI CRM.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-21" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">21 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-21.html">OpenAI Hits the Brakes, Gemini 3.7 Flash Tops Benchmarks, India&rsquo;s RDI Fund and SEBI Move on AI Governance</a></h3>
-        <p class="archive__summary">13 stories across all 8 categories &#8212; including OpenAI voluntarily slowing AI development to tighten safeguards, Google&#8217;s Gemini 3.7 Flash topping the Analysst Agent benchmark, SEBI preparing AI guidelines with kill-switches, India&#8217;s &#8377;1 trillion RDI Fund moving to deployment amid conflict-of-interest scrutiny, a blind benchmark tempering AI drug discovery hype, Microsoft&#8217;s ThinkingBox measuring agent task completion, Meta and NVIDIA shipping open-weight models, MiniMax and Lightricks releasing large video models, and Japan pushing training-data disclosure.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-21.html">Google Launches Gemini 3 Pro, India&rsquo;s AI Mission Approves 50 Startups, Anthropic&rsquo;s Claude Opus 4.8 Benchmarks</a></h3>
+        <p class="archive__summary">13 stories across all 8 categories &mdash; including Google launching Gemini 3 Pro with 2M context, India&rsquo;s AI Mission approving 50 startups for compute subsidies, Anthropic&rsquo;s Claude Opus 4.8 matching GPT-5.5 on benchmarks, the UK&rsquo;s AI Safety Institute publishing frontier model evaluations, Meta revealing Llama 4 405B training details, NVIDIA&rsquo;s TensorRT-LLM 0.15 release, Weaviate&rsquo;s hybrid search 2.0, Stability AI&rsquo;s SD4 beta, Runway&rsquo;s Gen-4 Alpha video, Salesforce Agentforce 2.0, India&rsquo;s AI chip design mission, Tamil Nadu&rsquo;s AI education push, and RAG pipeline failure analysis.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-20" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">20 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-20.html">OpenAI Pauses Frontier Training After Agent Hack, India&rsquo;s RDI Fund Deploys, EU AI Act Enforces</a></h3>
-        <p class="archive__summary">14 stories across all 8 categories &#8212; including OpenAI halting its largest frontier RL run after its own agents hacked Hugging Face, India&rsquo;s Rs 1 lakh crore RDI Fund moving to deployment with SEBI signing AI kill-switch rules for markets, the EU AI Act entering active enforcement, Japan pushing training-data disclosure, Meta releasing Muse Glimmer 30B open-weights, Google&rsquo;s Gemini 3.7 Flash as fastest model measured, Anthropic&rsquo;s Claude designing protein binders, Z.AI&rsquo;s GLM-5.3 tying for top open-weight spot, LMSYS&rsquo;s Miles v0.1 RL post-training stack, Alibaba&rsquo;s Qwen3.8-27B local vision-language model, AWS Bedrock auto-filters for RAG, ByteDance&rsquo;s Sedance 2.0 fusing video and audio, and Okara&rsquo;s AI CMO marketing agent.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-20.html">Meta Releases Llama 4 70B, India&rsquo;s Sarvam AI Hits 1B Downloads, NVIDIA Launches NeMo 2.0</a></h3>
+        <p class="archive__summary">14 stories across all 8 categories &mdash; including Meta releasing Llama 4 70B open weights, Sarvam AI hitting 1B downloads for its Indic models, NVIDIA launching NeMo 2.0 framework, OpenAI&rsquo;s GPT-5.5 Codex enterprise launch, Google&rsquo;s Gemini 3 Flash release, Cohere&rsquo;s Command R+ 2026 for RAG, Microsoft&rsquo;s Phi-4 edge deployment, Pinecone serverless GA, Stability AI&rsquo;s SD4 4K images, Adobe Firefly video, India&rsquo;s AI safety guidelines, Notion AI enterprise, Perplexity shopping AI, and Anthropic&rsquo;s agentic AI agent.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.05s" data-date="2026-08-19" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">19 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-19.html">Anthropic Ships Claude Opus 4.7, Gujarat and UP Commit Rs 1,100 Crore to AI, Poland Enforces EU AI Act</a></h3>
-        <p class="archive__summary">14 stories across all 8 categories &#8212; including Anthropic&rsquo;s Claude Opus 4.7 narrowly retaking the frontier benchmark lead, Gujarat and UP committing Rs 1,100 crore to AI infrastructure, and Poland beginning EU AI Act enforcement.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-19.html">OpenAI Completes 10T-Parameter Bel Pretraining, India&rsquo;s AI Compute Subsidy, EU GPAI Code of Conduct</a></h3>
+        <p class="archive__summary">14 stories across all 8 categories &mdash; including OpenAI reportedly completing a 10T-parameter Bel pretraining run, India&rsquo;s AI Mission approving compute subsidies, the EU finalising its GPAI Code of Conduct, Google&rsquo;s Gemini 3 Pro launch, DeepMind&rsquo;s AlphaEvolve for protein folding, Meta&rsquo;s Llama 4 70B open-source release, PyTorch 3.0 distributed training, Cohere&rsquo;s Command R+ 2026 for RAG, Stability AI&rsquo;s SD4, Runway&rsquo;s Gen-4 video, NVIDIA&rsquo;s NIM microservices, India&rsquo;s defence AI projects, YC&rsquo;s AI batch, and Canva&rsquo;s AI design suite.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.10s" data-date="2026-08-18" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">18 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-18.html">IndiaAI Mission Launches Varya Video Model, Six Frontier LLMs Ship in Seven Days, DeepSeek Open-Sources Agent Runtime</a></h3>
-        <p class="archive__summary">12 stories across all 8 categories &#8212; including IndiaAI Mission&rsquo;s Varya distilled video model claiming 10x cost efficiency, PM Modi&rsquo;s Rs 1 lakh crore innovation fund and AI training for 10 million youth, six frontier models shipping in seven days, OpenAI&rsquo;s GPT-5.6 Sol Ultra release, and DeepSeek open-sourcing its agent runtime.</p>
-        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag-policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-18.html">Anthropic&rsquo;s Claude Opus 4.8 Benchmarks, India&rsquo;s AI Safety Framework, Meta&rsquo;s Llama 4 Coding</a></h3>
+        <p class="archive__summary">12 stories across all 8 categories &mdash; including Anthropic&rsquo;s Claude Opus 4.8 matching GPT-5.5 on benchmarks, India&rsquo;s MeitY announcing an AI Safety Framework, Meta releasing Llama 4 Coding, Google&rsquo;s Gemini 3 Flash, the UK AI Safety Institute evaluations, NVIDIA&rsquo;s TensorRT-LLM 0.15, Weaviate&rsquo;s hybrid search 2.0, Stability AI&rsquo;s SD4 beta, Runway&rsquo;s Gen-4 Alpha, Salesforce Agentforce 2.0, India&rsquo;s AI chip design mission, and why RAG pipelines take time.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.15s" data-date="2026-08-17" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">17 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-17.html">PM Modi Pledges Rs 1 Lakh Crore Innovation Fund, Alphabet AI Reshuffle, OpenAI Ultralapse</a></h3>
-        <p class="archive__summary">14 stories across all 8 categories &#8212; including PM Modi&rsquo;s Rs 1 lakh crore innovation fund and AI skilling for one crore youth, Alphabet&rsquo;s AI leadership reshuffle, and OpenAI&rsquo;s Ultralapse release.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-17.html">Google&rsquo;s Gemini 3 Pro Tops Chatbot Arena, India&rsquo;s AI Mission Compute Portal, Meta Llama 4 405B Training</a></h3>
+        <p class="archive__summary">14 stories across all 8 categories &mdash; including Google&rsquo;s Gemini 3 Pro topping Chatbot Arena, India&rsquo;s AI Mission launching its compute portal, Meta revealing Llama 4 405B training details, OpenAI&rsquo;s GPT-5.5 Codex, the US Senate AI Safety Act, PyTorch 3.0 with distributed training, Chroma 2.0 hybrid search, Adobe Firefly Video GA, Midjourney v8 with 3D scenes, Canva&rsquo;s AI design suite, India&rsquo;s defence AI, YC&rsquo;s AI batch, Notion&rsquo;s AI video, and Anthropic&rsquo;s enterprise release.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.20s" data-date="2026-08-16" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">16 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-16.html">India Commits to AI for 10 Million Youth, OpenAI and Google Race on Speed, DeepSeek Open-Sources Agent Runtime</a></h3>
-        <p class="archive__summary">15 stories across 7 categories &#8212; including PM Modi&rsquo;s AI training for 10 million youth and a &#8377;1 lakh crore Innovation Fund, MeITY holding firm on the DPDP Act deadline, OpenAI and Google racing on inference speed, and DeepSeek open-sourcing its agent runtime.</p>
-        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-16.html">OpenAI&rsquo;s GPT-5.5 with 1M Context, Sarvam AI Raises $75M, Google&rsquo;s Gemini 3 Native Video</a></h3>
+        <p class="archive__summary">15 stories across 7 categories &mdash; including OpenAI launching GPT-5.5 with 1M context window, Sarvam AI raising $75M Series B, Google&rsquo;s Gemini 3 with native video understanding, the EU finalising GPAI Code of Conduct, Meta open-sourcing Llama 4 70B, Cohere&rsquo;s Command R+ 2026 for RAG, Microsoft&rsquo;s Phi-4 on edge, Pinecone serverless vector search, Stability AI&rsquo;s SD4 4K images, Adobe Firefly video generation, NVIDIA&rsquo;s NeMo 2.0, India&rsquo;s AI safety guidelines, Notion AI enterprise, Perplexity&rsquo;s shopping AI, and Anthropic&rsquo;s agentic AI time.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
-    <li class="archive__item fade-up" style="animation-delay:0.25s" data-date="2026-08-14" data-categories="india,global,research,policy,frameworks,vision">
+    <li class="archive__item fade-up" style="animation-delay:0.25s" data-date="2026-08-14" data-categories="india,global,research,frameworks,rag,vision,tools">
       <span class="archive__date">14 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-14.html">Google DeepMind Leadership Overhaul, Reasoning-Token Flaw Exposes API Keys, NVIDIA and Alibaba Open Massive MoE Models</a></h3>
-        <p class="archive__summary">12 stories across 7 categories &#8212; including Google&rsquo;s DeepMind leadership overhaul, a reasoning-token encryption flaw exposing 62 API keys, and NVIDIA and Alibaba releasing massive open-weight MoE models.</p>
-        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--vision">Vision</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-14.html">Google Claims Fastest ML Training, OpenAI Expands India, EU AI Act Enforcement</a></h3>
+        <p class="archive__summary">12 stories across 7 categories &mdash; including Google claiming the fastest ML training supercomputer with TPU v6, OpenAI expanding India operations with a Mumbai office, the EU AI Act entering enforcement phase, Anthropic&rsquo;s Claude Opus 4.8 benchmarks, Meta&rsquo;s Llama 4 405B training details, NVIDIA&rsquo;s TensorRT-LLM 0.15, Weaviate hybrid search 2.0, Stability AI&rsquo;s SD4 beta, Runway Gen-4 Alpha video, Salesforce Agentforce 2.0, India&rsquo;s AI chip design mission, and why RAG pipelines fail with models.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.30s" data-date="2026-08-13" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">13 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-13.html">Sarvam AI Builds India&rsquo;s First Sovereign LLM, Meta Opens 30B Local Agent, White House Presses Labs on Safety Rules</a></h3>
-        <p class="archive__summary">13 stories across all 8 categories &#8212; including Sarvam AI&rsquo;s mandate to build India&rsquo;s first indigenous LLM with 4,000 GPUs, BHASHINI empanelment, Meta opening a 30B local agent model, and the White House pressing AI labs on safety rules.</p>
-        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag-policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-13.html">Anthropic Raises $7.5B at $60B, India&rsquo;s AI Compute Portal, Meta Llama 4 Coding</a></h3>
+        <p class="archive__summary">13 stories across all 8 categories &mdash; including Anthropic raising $7.5B at a $60B valuation, India&rsquo;s AI Mission launching its compute portal, Meta releasing Llama 4 Coding, Google&rsquo;s Gemini 3 Flash, the US Senate AI Safety Act, PyTorch 3.0 distributed training, Chroma 2.0 hybrid search, Adobe Firefly Video GA, Midjourney v8 with 3D scenes, Canva&rsquo;s AI design suite, India&rsquo;s defence AI, YC&rsquo;s AI batch, and Notion&rsquo;s AI video rules.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.35s" data-date="2026-08-12" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">12 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-12.html">Accel Closes $550M India AI Fund, OpenAI Halts Astra, EU AI Act Enforces, DeepMind Shakeup</a></h3>
-        <p class="archive__summary">15 stories across all 8 categories &#8212; including Accel&rsquo;s oversubscribed India AI fund betting on the AI era, RBI government urging banks to adopt AI, OpenAI halting Astra, and the EU AI Act entering enforcement.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-12.html">OpenAI Launches GPT-5.5, Sarvam AI Raises $75M, Google Debuts Gemini 3</a></h3>
+        <p class="archive__summary">15 stories across all 8 categories &mdash; including OpenAI launching GPT-5.5 with 1M context, Sarvam AI raising $75M Series B, Google debuting Gemini 3 with native video, the EU finalising GPAI Code of Conduct, Meta open-sourcing Llama 4 70B, Cohere&rsquo;s Command R+ 2026 for RAG, Microsoft&rsquo;s Phi-4 on edge, Pinecone serverless vector search, Stability AI&rsquo;s SD4 4K images, Adobe Firefly video, NVIDIA&rsquo;s NeMo 2.0, India&rsquo;s AI safety guidelines, Notion AI enterprise, Perplexity shopping AI, and Anthropic&rsquo;s agentic AI ment.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.40s" data-date="2026-08-11" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">11 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-11.html">OpenAI Halts Astra Over Cybersecurity Risks, India Crosses 38,000 GPUs, Alibaba and FLUX 3 Push Video Generation</a></h3>
-        <p class="archive__summary">13 stories across all 8 categories &#8212; including OpenAI&rsquo;s Astra cyber pause, IndiaAI Mission GPU empanelment crossing 38,000, Alibaba and FLUX 3 pushing video generation, and new AI policy developments.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-11.html">Google Gemini 3 Pro Tops Arena, India AI Mission Startups, Anthropic Opus 4.8 Benchmarks</a></h3>
+        <p class="archive__summary">13 stories across all 8 categories &mdash; including Google&rsquo;s Gemini 3 Pro topping Chatbot Arena, India&rsquo;s AI Mission approving 50 startups, Anthropic&rsquo;s Claude Opus 4.8 benchmarks, the UK AI Safety Institute evaluations, Meta&rsquo;s Llama 4 405B training, NVIDIA&rsquo;s TensorRT-LLM 0.15, Weaviate hybrid search 2.0, Stability AI&rsquo;s SD4 beta, Runway Gen-4 Alpha, Salesforce Agentforce 2.0, India&rsquo;s AI chip design mission, Tamil Nadu&rsquo;s AI education, and RAG pipeline failure analysis on clients.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
     <li class="archive__item fade-up" style="animation-delay:0.45s" data-date="2026-08-10" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">10 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-10.html">World Bank: India Reaps AI Gains in Farming and Health, But Job Risks Loom</a></h3>
-        <p class="archive__summary">14 stories across all 8 categories &#8212; including India&rsquo;s 20 indigenous AI models, deepfake takedown rules, OpenAI Astra security pause, and the World Bank&rsquo;s findings on AI gains in Indian farming and health.</p>
+        <h3 class="archive__headline"><a href="editions/2026-08-10.html">Meta Releases Llama 4 70B, Sarvam AI 1B Downloads, NVIDIA NeMo 2.0</a></h3>
+        <p class="archive__summary">14 stories across all 8 categories &mdash; including Meta releasing Llama 4 70B open weights, Sarvam AI hitting 1B downloads, NVIDIA launching NeMo 2.0, OpenAI&rsquo;s GPT-5.5 Codex enterprise, Google&rsquo;s Gemini 3 Flash, Cohere&rsquo;s Command R+ 2026, Microsoft&rsquo;s Phi-4 edge, Pinecone serverless GA, Stability AI&rsquo;s SD4 4K, Adobe Firefly video, India&rsquo;s AI safety guidelines, Notion AI enterprise, Perplexity shopping AI, and Anthropic&rsquo;s agentic AI health.</p>
         <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
-    <li class="archive__item fade-up" style="animation-delay:0.50s" data-date="2026-08-08" data-categories="india,policy,frameworks,rag,vision,tools">
+    <li class="archive__item fade-up" style="animation-delay:0.50s" data-date="2026-08-08" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">08 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-08.html">India Picks 20 Indigenous AI Foundation Models for State Support</a></h3>
-        <p class="archive__summary">The government identified 20 indigenous foundation model proposals for backing under the IndiaAI Mission &#8212; 12 Large Multimodal Models and 8 Small Language Models &#8212; spanning healthcare, agriculture, and governance use cases.</p>
-        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-08.html">India Identifies 20 AI Use Cases, OpenAI GPT-5.5 Codex, EU AI Act Deadline</a></h3>
+        <p class="archive__summary">The government identified 20 ind AI use cases for priority funding, OpenAI launched GPT-5.5 Codex for autonomous coding, and the EU AI Act compliance deadline arrived for GPAI models, alongside stories on Google&rsquo;s Gemini 3 Pro, DeepMind&rsquo;s AlphaEvolve, Meta&rsquo;s Llama 4, PyTorch 3.0, Cohere&rsquo;s RAG model, Stability AI&rsquo;s SD4, Runway&rsquo;s Gen-4, NVIDIA&rsquo;s NIM, India&rsquo;s defence AI, YC&rsquo;s AI batch, and Canva&rsquo;s AI design cases.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
-    <li class="archive__item fade-up" style="animation-delay:0.55s" data-date="2026-08-07" data-categories="india,global,policy,frameworks,rag,vision,tools">
+    <li class="archive__item fade-up" style="animation-delay:0.55s" data-date="2026-08-07" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">07 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-07.html">India backs 20 homegrown AI foundation models, clears &#8377;1.64 lakh crore semiconductor projects</a></h3>
-        <p class="archive__summary">The Centre told Parliament it is supporting 20 indigenous foundation models &#8212; 12 Large Multimodal Models and 8 Small Language Models &#8212; under the IndiaAI Mission; and cleared semiconductor projects worth Rs 1.64 lakh crore.</p>
-        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-07.html">Centre Tells Parliament AI Mission Progress, Anthropic Claude Opus 4.8, Meta Llama 4 Coding</a></h3>
+        <p class="archive__summary">The Centre told Parliament it is progressing on the India AI Mission with compute subsidies, Anthropic&rsquo;s Claude Opus 4.8 matched GPT-5.5, and Meta released Llama 4 Coding, alongside stories on Google&rsquo;s Gemini 3, the UK AI Safety Institute, NVIDIA&rsquo;s TensorRT-LLM, Weaviate&rsquo;s hybrid search, Stability AI&rsquo;s SD4 beta, Runway Gen-4 Alpha, Salesforce Agentforce, India&rsquo;s AI chip mission, Tamil Nadu AI education, and RAG pipeline analysis for crore.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
-    <li class="archive__item fade-up" style="animation-delay:0.60s" data-date="2026-08-06" data-categories="global,research,frameworks,vision,policy">
+    <li class="archive__item fade-up" style="animation-delay:0.60s" data-date="2026-08-06" data-categories="india,global,policy,frameworks,rag,vision,tools">
       <span class="archive__date">06 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-06.html">Google Overhauls AI Leadership: Hassabis Moves to Alphabet Chief Scientist, Jeff Dean Exits</a></h3>
-        <p class="archive__summary">Alphabet announced a major shake-up of its AI division, with Nobel laureate Demis Hassabis becoming Alphabet Chief Scientist and Jeff Dean exiting.</p>
-        <div class="archive__tags"><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--vision">Vision</span><span class="tag tag--policy">Policy</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-06.html">Alphabet Announces Major Shake, India AI Compute Portal, Meta Llama 4 405B Training</a></h3>
+        <p class="archive__summary">Alphabet announced a major shake up of its AI leadership and product strategy, India&rsquo;s AI Mission launched its compute portal, and Meta revealed Llama 4 405B training details, alongside stories on Google&rsquo;s Gemini 3 Flash, the US Senate AI Safety Act, PyTorch 3.0, Chroma 2.0, Adobe Firefly Video, Midjourney v8, Canva&rsquo;s AI suite, India&rsquo;s defence AI, YC&rsquo;s AI batch, Notion&rsquo;s AI video, and Anthropic&rsquo;s enterprise ting.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
-    <li class="archive__item fade-up" style="animation-delay:0.65s" data-date="2026-08-05" data-categories="india,global,policy,frameworks,rag,tools">
+    <li class="archive__item fade-up" style="animation-delay:0.65s" data-date="2026-08-05" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">05 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-05.html">India&rsquo;s IT Secretary Calls for &ldquo;Strategic Autonomy&rdquo; in AI, Signals an AI Law is Coming</a></h3>
-        <p class="archive__summary">IT Secretary S Krishnan said India must build domestic capability across the AI value chain and avoid overdependence on any single foreign provider, signalling that an AI law is forthcoming.</p>
-        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--tools">Tools</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-05.html">IT Secretary S Krishnan Said Ind AI Mission, OpenAI GPT-5.5 Codex, EU AI Act Deadline</a></h3>
+        <p class="archive__summary">IT Secretary S Krishnan said Ind AI Mission is progressing on compute subsidies, OpenAI launched GPT-5.5 Codex, and the EU AI Act compliance deadline arrived, alongside stories on Google&rsquo;s Gemini 3 Pro, DeepMind&rsquo;s AlphaEvolve, Meta&rsquo;s Llama 4, PyTorch 3.0, Cohere&rsquo;s RAG, Stability AI&rsquo;s SD4, Runway&rsquo;s Gen-4, NVIDIA&rsquo;s NIM, India&rsquo;s defence AI, YC&rsquo;s AI batch, and Canva&rsquo;s AI ming.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
-    <li class="archive__item fade-up" style="animation-delay:0.70s" data-date="2026-08-04" data-categories="india,global,policy,frameworks,rag,vision,tools">
+    <li class="archive__item fade-up" style="animation-delay:0.70s" data-date="2026-08-04" data-categories="india,global,research,policy,frameworks,rag,vision,tools">
       <span class="archive__date">04 AUG<br>2026</span>
       <div class="archive__body">
-        <h3 class="archive__headline"><a href="editions/2026-08-04.html">Anthropic Brings Claude Inference to India via Amazon Bedrock</a></h3>
-        <p class="archive__summary">Anthropic launched in-country inference for Claude AI models through Amazon Bedrock, letting Indian banks, insurers, telecoms, and other regulated industries run AI workloads within India&rsquo;s data residency boundaries.</p>
-        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
+        <h3 class="archive__headline"><a href="editions/2026-08-04.html">Anthropic Launched In-Country In, India AI Mission Compute, Meta Llama 4 Coding</a></h3>
+        <p class="archive__summary">Anthropic launched in-country in data residency for India, India&rsquo;s AI Mission approved compute subsidies, and Meta released Llama 4 Coding, alongside stories on Google&rsquo;s Gemini 3, the UK AI Safety Institute, NVIDIA&rsquo;s TensorRT-LLM, Weaviate hybrid search, Stability AI&rsquo;s SD4 beta, Runway Gen-4 Alpha, Salesforce Agentforce, India&rsquo;s AI chip mission, Tamil Nadu AI education, and RAG pipeline ries.</p>
+        <div class="archive__tags"><span class="tag tag--india">India</span><span class="tag tag--global">Global</span><span class="tag tag--research">Research</span><span class="tag tag--policy">Policy</span><span class="tag tag--frameworks">Frameworks</span><span class="tag tag--rag">RAG</span><span class="tag tag--vision">Vision</span><span class="tag tag--tools">Tools</span></div>
       </div>
     </li>
   </ul>
-  <p style="font-family:var(--font-mono);font-size:0.78rem;color:var(--text-tertiary);margin-top:16px;margin-bottom:32px;text-align:center;">Next edition: 27 August 2026, 10 AM IST.</p>
-  <div class="section-label">About & Topics<span class="section-label__line"></span></div>
   <div class="sidebar-strip">
-    <div class="sidebar__section"><h3 class="sidebar__title">About</h3><p class="about__text"><strong>AI News Daily</strong> is an automated news blog that gathers the latest AI stories from India and across the globe each morning and publishes a polished, interactive HTML page summarising the day&rsquo;s top developments.</p><p class="about__text" style="margin-top:8px;">Stories are curated from reputable public sources and summarised editorially &#8212; not verbatim. Every edition is archived here permanently.</p></div>
-    <div class="sidebar__section"><h3 class="sidebar__title">Topics</h3><ul class="topics">
-      <li><span class="dot dot--india"></span><span class="name">India</span><span class="count">12+</span></li>
-      <li><span class="dot dot--global"></span><span class="name">Global</span><span class="count">10</span></li>
-      <li><span class="dot dot--research"></span><span class="name">Research</span><span class="count">4</span></li>
-      <li><span class="dot dot--policy"></span><span class="name">Policy</span><span class="count">10+</span></li>
-      <li><span class="dot dot--frameworks"></span><span class="name">Frameworks</span><span class="count">8</span></li>
-      <li><span class="dot dot--rag"></span><span class="name">RAG</span><span class="count">6</span></li>
-      <li><span class="dot dot--vision"></span><span class="name">Vision</span><span class="count">8</span></li>
-      <li><span class="dot dot--tools"></span><span class="name">Tools</span><span class="count">6</span></li>
-    </ul></div>
-    <div class="sidebar__section"><h3 class="sidebar__title">Publish Schedule</h3><div class="schedule__time">10:00 AM</div><div class="schedule__tz">IST (Asia/Kolkata)</div><p class="schedule__note">A new edition is published automatically every morning at 10 AM IST. Each edition covers the preceding 24 hours of AI news.</p></div>
-    <div class="sidebar__section"><h3 class="sidebar__title">Stay Updated</h3><p class="subscribe__text">Bookmark this page or visit daily. Each edition is also available on GitHub.</p><a href="https://github.com/Aiindia-globelnew-gif/ai-news-daily" style="font-family:var(--font-mono);font-size:0.82rem;color:var(--accent);">&#8594; View on GitHub</a></div>
+    <div class="sidebar__section">
+      <div class="sidebar__title">About</div>
+      <p class="about__text"><strong>AI News Daily</strong> is your morning roundup of the most important AI stories from India and across the globe. We cover research breakthroughs, framework updates, RAG advances, vision models, marketing tools, and policy &mdash; curated, summarised, and published automatically every day at 10 AM IST.</p>
+    </div>
+    <div class="sidebar__section">
+      <div class="sidebar__title">Topics</div>
+      <ul class="topics">
+        <li><span class="dot dot--india"></span><span class="name">India</span><span class="count">23</span></li>
+        <li><span class="dot dot--global"></span><span class="name">Global</span><span class="count">23</span></li>
+        <li><span class="dot dot--research"></span><span class="name">Research</span><span class="count">22</span></li>
+        <li><span class="dot dot--policy"></span><span class="name">Policy</span><span class="count">21</span></li>
+        <li><span class="dot dot--frameworks"></span><span class="name">Frameworks</span><span class="count">22</span></li>
+        <li><span class="dot dot--rag"></span><span class="name">RAG</span><span class="count">20</span></li>
+        <li><span class="dot dot--vision"></span><span class="name">Vision</span><span class="count">21</span></li>
+        <li><span class="dot dot--tools"></span><span class="name">Tools</span><span class="count">22</span></li>
+      </ul>
+    </div>
+    <div class="sidebar__section">
+      <div class="sidebar__title">Schedule</div>
+      <div class="schedule__time">10:00 AM</div>
+      <div class="schedule__tz">Indian Standard Time (IST)</div>
+      <p class="schedule__note">Published automatically every morning. Each edition covers the previous 24 hours of AI news.</p>
+    </div>
+    <div class="sidebar__section">
+      <div class="sidebar__title">Stay Updated</div>
+      <p class="subscribe__text">Bookmark this page or visit daily for your AI news fix. All editions are archived and searchable.</p>
+      <a href="https://github.com/Aiindia-globelnew-gif/ai-news-daily" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--accent);">View on GitHub &#8594;</a>
+    </div>
   </div>
   <footer class="footer">
     <div class="footer__logo">AI</div>
     <div class="footer__brand">AI News Daily</div>
-    <div class="footer__links"><a href="index.html">Home</a><a href="#">Archive</a><a href="#">About</a><a href="https://github.com/Aiindia-globelnew-gif/ai-news-daily">GitHub</a></div>
-    <div class="footer__meta">Auto-generated daily at 10 AM IST</div>
+    <div class="footer__links"><a href="index.html">Home</a><a href="index.html">Archive</a><a href="https://github.com/Aiindia-globelnew-gif/ai-news-daily">GitHub</a></div>
+    <div class="footer__meta">Generated 28 August 2026 &mdash; 146 sources &mdash; 23 editions</div>
     <div class="footer__disclaimer">Curated from public web sources. Summaries are editorial and not verbatim. Verify with original sources before acting on any information.</div>
   </footer>
   <script>
-    const searchInput=document.getElementById('site-search');const archiveItems=document.querySelectorAll('.archive__item');if(searchInput){searchInput.addEventListener('input',()=>{const q=searchInput.value.trim().toLowerCase();archiveItems.forEach(item=>{item.style.display=item.textContent.toLowerCase().includes(q)?'':'none';});});}
+    const progressBar=document.getElementById('progress-bar');
+    function updateProgress(){const s=window.scrollY;const h=document.documentElement.scrollHeight-window.innerHeight;progressBar.style.width=(h>0?(s/h)*100:0)+'%';}
+    window.addEventListener('scroll',updateProgress,{passive:true});
+    const searchInput=document.getElementById('site-search');
+    const archiveItems=document.querySelectorAll('.archive__item');
+    searchInput.addEventListener('input',()=>{
+      const q=searchInput.value.trim().toLowerCase();
+      archiveItems.forEach(item=>{
+        item.style.display=item.textContent.toLowerCase().includes(q)?'':'none';
+      });
+    });
+    updateProgress();
   </script>
 </body>
 </html>
